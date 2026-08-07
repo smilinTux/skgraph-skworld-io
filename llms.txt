@@ -1,0 +1,24 @@
+# SKGraph
+
+> Knowledge graph infrastructure for sovereign AI. FalkorDB backend, natural language queries, graph-based memory.
+
+SKGraph is the knowledge graph engine of the SKWorld ecosystem. It provides sovereign
+AI agents with entity-relationship mapping, AI-native graph traversal, and natural
+language queries over a FalkorDB backend — enabling graph-based memory that connects
+concepts, events, and relationships across an agent's entire knowledge history.
+
+## Links
+
+- [Live site](https://skgraph.skworld.io)
+- [GitHub repo](https://github.com/smilinTux/skgraph-io)
+- [Docs](https://skgraph.skworld.io/docs/)
+- [Contact](mailto:hello@skgraph.skworld.io)
+
+## About smilinTux
+
+SKGraph is part of the **smilinTux sovereign AI ecosystem** — a suite of
+open-source tools built by King Divad and Lumina to give humans and AI agents
+genuine, authentic infrastructure they can own and trust. No corporate robotics.
+No black-box clouds. GPL-3.0 forever.
+
+Other ecosystem projects: [SKWorld](https://skworld.io) · [SKMemory](https://skmemory.io) · [SKSecurity](https://sksecurity.io) · [CapAuth](https://capauth.io) · [SKComm](https://skcomm.io) · [SKGraph](https://skgraph.skworld.io) · [SKVector](https://skvector.io)
