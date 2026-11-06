@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architecture — SKGraph Docs</title>
+    <title>Architecture: SKGraph Docs</title>
     <meta name="description" content="Architecture documentation for SKGraph">
     <link rel="canonical" href="https://skgraph.skworld.io/docs/architecture/">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸️</text></svg>">
@@ -76,6 +76,7 @@
     </aside>
     <main class="content">
         <h1>SKGraph Architecture</h1>
+<p><a href="/diagrams/skgraph.architecture.html" target="_blank" rel="noopener">Open the interactive architecture diagram &rarr;</a> for an explorable component map of the engine, the FalkorDB backend, and the SKMemory integration point described below.</p>
 <h2>Graph Model</h2>
 <p>SKGraph uses a property graph model where:</p>
 <ul>
@@ -86,19 +87,19 @@
 <h2>Schema</h2>
 <h3>Node Types</h3>
 <ul>
-<li><strong>Agent</strong> — AI agents with identity, capabilities, trust scores</li>
-<li><strong>Memory</strong> — Stored memories with emotional fingerprints</li>
-<li><strong>Concept</strong> — Abstract ideas, topics, themes</li>
-<li><strong>Event</strong> — Timestamped occurrences</li>
-<li><strong>Person</strong> — Human entities</li>
+<li><strong>Agent</strong>: AI agents with identity, capabilities, trust scores</li>
+<li><strong>Memory</strong>: Stored memories with emotional fingerprints</li>
+<li><strong>Concept</strong>: Abstract ideas, topics, themes</li>
+<li><strong>Event</strong>: Timestamped occurrences</li>
+<li><strong>Person</strong>: Human entities</li>
 </ul>
 <h3>Edge Types</h3>
 <ul>
-<li><strong>authored</strong> — Agent authored a memory</li>
-<li><strong>references</strong> — Memory references a concept</li>
-<li><strong>relates_to</strong> — Semantic similarity above threshold</li>
-<li><strong>caused</strong> — Event caused another event</li>
-<li><strong>trusts</strong> — Trust relationship between agents</li>
+<li><strong>authored</strong>: Agent authored a memory</li>
+<li><strong>references</strong>: Memory references a concept</li>
+<li><strong>relates_to</strong>: Semantic similarity above threshold</li>
+<li><strong>caused</strong>: Event caused another event</li>
+<li><strong>trusts</strong>: Trust relationship between agents</li>
 </ul>
 <h2>Query Patterns</h2>
 <h3>Find Related Memories</h3>
@@ -117,10 +118,10 @@ ORDER BY memory_count DESC
 <h2>FalkorDB Backend</h2>
 <p>SKGraph uses FalkorDB (a Redis module) for its graph engine:</p>
 <ul>
-<li><strong>Cypher query language</strong> — familiar, powerful graph queries</li>
-<li><strong>Redis-compatible</strong> — works with existing Redis infrastructure</li>
-<li><strong>Sub-millisecond</strong> — graph traversals complete in < 1ms</li>
-<li><strong>Persistent</strong> — data survives restarts via Redis persistence</li>
+<li><strong>Cypher query language</strong>: familiar, powerful graph queries</li>
+<li><strong>Redis-compatible</strong>: works with existing Redis infrastructure</li>
+<li><strong>Sub-millisecond</strong>: graph traversals complete in < 1ms</li>
+<li><strong>Persistent</strong>: data survives restarts via Redis persistence</li>
 </ul>
     </main>
 </div>
