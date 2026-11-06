@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SKGraph Architecture",
+    "subtitle": "A property graph engine on FalkorDB, queried in natural language and used as agent memory",
+    "output": "skgraph.architecture.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    { "id": "agent", "type": "frontend", "label": "AI Agent", "sublabel": "SKWorld agent client", "pos": [40, 240], "size": [160, 64] },
+    { "id": "engine", "type": "backend", "label": "SKGraph Engine", "sublabel": "natural language to Cypher", "pos": [320, 240], "size": [180, 64] },
+    { "id": "falkordb", "type": "database", "label": "FalkorDB", "sublabel": "Redis module, Cypher graph store", "pos": [620, 240], "size": [160, 64] },
+    { "id": "skmemory", "type": "external", "label": "SKMemory", "sublabel": "agent memory integration", "pos": [320, 60], "size": [180, 64] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "SKGraph service", "wraps": ["engine", "falkordb"] }
+  ],
+  "connections": [
+    { "id": "agent-to-engine", "from": "agent", "to": "engine", "label": "natural language query", "variant": "default", "fromSide": "right", "toSide": "left" },
+    { "id": "engine-to-falkordb", "from": "engine", "to": "falkordb", "label": "Cypher query", "variant": "default", "fromSide": "right", "toSide": "left" },
+    { "id": "engine-to-skmemory", "from": "engine", "to": "skmemory", "label": "memory nodes and edges", "variant": "dashed", "fromSide": "top", "toSide": "bottom" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Node types",
+      "items": [
+        "Agent: identity, capabilities, trust scores",
+        "Memory: stored memories with emotional fingerprints",
+        "Concept: abstract ideas, topics, themes",
+        "Event: timestamped occurrences",
+        "Person: human entities"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Edge types",
+      "items": [
+        "authored: agent authored a memory",
+        "references: memory references a concept",
+        "relates_to: semantic similarity above threshold",
+        "caused: event caused another event",
+        "trusts: trust relationship between agents"
+      ]
+    }
+  ]
+}
